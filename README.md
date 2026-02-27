@@ -1,9 +1,9 @@
-# 🏜️ Offroad Semantic Scene Segmentation
+# Offroad Semantic Scene Segmentation
 ### Duality AI Hackathon — Segmentation Track | Team CodeChasers
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Project Overview](#-project-overview)
 2. [Model Architecture](#-model-architecture)
@@ -20,7 +20,7 @@
 
 ---
 
-## 🌟 Project Overview
+## Project Overview
 
 This project implements a **semantic segmentation pipeline** for off-road desert environments, developed for the Duality AI Offroad Autonomy Segmentation Hackathon.
 
@@ -37,7 +37,7 @@ The goal is to classify every pixel in a desert scene into one of **10 semantic 
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 ```
 Input Image (3 × H × W)
@@ -74,7 +74,7 @@ Desert scenes contain objects at vastly different scales — a tiny rock cluster
 
 ---
 
-## 📊 Results
+## Results
 
 ### Training Performance (ViT-S, 25 epochs)
 
@@ -95,7 +95,7 @@ Expected challenging classes: Logs, Ground Clutter (rare, visually similar to su
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CodeChasers_CodeCrunch/
@@ -216,7 +216,7 @@ conda activate EDU
 
 ---
 
-## 📂 Dataset Setup
+## Dataset Setup
 
 Download the dataset from the Duality AI Falcon platform (link provided in hackathon instructions) and place it as follows:
 
@@ -238,7 +238,7 @@ CodeChasers_CodeCrunch/
 
 ---
 
-## 🏋️ Training
+## Training
 
 ### Basic Training Run
 
@@ -312,7 +312,7 @@ backbone = torch.hub.load("facebookresearch/dinov2", "dinov2_vitb14")
 
 ---
 
-## 🧪 Testing & Inference
+## Testing & Inference
 
 ### Run on Test Images (No Ground Truth)
 
@@ -374,7 +374,7 @@ predictions/
 
 ---
 
-## 🎨 Visualizing Predictions
+## Visualizing Predictions
 
 To colorize any folder of raw prediction masks:
 
@@ -386,7 +386,7 @@ Colorized images are saved to `predictions/masks/colorized/`.
 
 ---
 
-## ⚡ Tips to Improve IoU
+## Tips to Improve IoU
 
 **1. Train more epochs** — if Val IoU is still improving, keep going:
 ```python
@@ -408,7 +408,7 @@ scaler = torch.cuda.amp.GradScaler()
 
 ---
 
-## 🔧 Configuration Reference
+## Configuration Reference
 
 ### Class Weights (in train.py)
 
@@ -435,7 +435,7 @@ Images are resized to the nearest multiple of 14 (DINOv2 patch size):
 
 ---
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Training hangs at "Starting training..."
 **Cause:** `num_workers > 0` on Windows causes DataLoader deadlock.
@@ -491,7 +491,7 @@ These are harmless — xFormers is an optional speed optimization for DINOv2. Tr
 
 ---
 
-## 🗺️ Class Legend
+## Class Legend
 
 | Class ID | Name | Color | Notes |
 |----------|------|-------|-------|
@@ -508,7 +508,7 @@ These are harmless — xFormers is an optional speed optimization for DINOv2. Tr
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 ```
 python >= 3.10
@@ -523,7 +523,7 @@ tqdm
 
 ---
 
-## 📬 Submission Checklist
+## Submission Checklist
 
 - [ ] `scripts/train.py` — training script
 - [ ] `scripts/test.py` — inference script  
