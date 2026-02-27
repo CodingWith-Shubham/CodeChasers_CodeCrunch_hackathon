@@ -533,8 +533,6 @@ tqdm
 - [ ] `predictions/` — test image predictions
 - [ ] `ENV_SETUP/setup_env.bat` — environment setup
 - [ ] `README.md` — this file
-- [ ] GitHub repo set to **private**
-- [ ] Collaborators added: `Maazsyedm`, `rebekah-bogdanoff`, `egold010`
 
 ---
 
