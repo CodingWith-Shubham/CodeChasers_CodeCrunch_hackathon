@@ -1,0 +1,6 @@
+TRAINING RESULTS
+==================================================
+Best Val IoU:      0.4134 (Epoch 18)
+Best Val Accuracy: 0.7630
+Final Val IoU:     0.4129
+Final Val Loss:    0.4195
