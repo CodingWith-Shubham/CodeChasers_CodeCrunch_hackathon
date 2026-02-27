@@ -322,9 +322,9 @@ def main():
     print(f"Using device: {device}")
 
     # Config
-    batch_size = 1
-    lr = 1e-4
-    n_epochs = 35
+    batch_size = 2
+    lr = 3e-4
+    n_epochs = 25
     weight_decay = 1e-4
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
